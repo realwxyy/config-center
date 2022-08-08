@@ -1,0 +1,22 @@
+server:
+  port: 9081
+spring:
+  application:
+    name: task-center
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/common_api?charset=utf8mb4&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+logging:
+  level:
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9099/eureka
